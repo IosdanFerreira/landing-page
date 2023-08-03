@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.card__container {
+  overflow: hidden;
+  border: 1px solid #ffffff36;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: 0.3s ease;
+  min-height: 530px;
+
+  &:hover {
+    border: 1px solid #ffffff85;
+  }
+
+  figure img {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+  }
+
+  &:hover figure img {
+    transform: scale(1.2);
+  }
+
+  button {
+    all: unset;
+    border: 2px solid $primary__color__100;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: bold;
+    transition: 0.2s ease;
+    margin: 0 15px 20px 15px;
+
+    &:hover {
+      background-color: $primary__color__100;
+    }
+  }
+}
+
+.card__content {
+  padding: 0 15px;
+}
