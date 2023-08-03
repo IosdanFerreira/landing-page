@@ -11,6 +11,9 @@ import ServicesCard from './components/ServicesCard';
 
 // icons
 import {FiUserCheck} from 'react-icons/fi';
+import {AiOutlineCopyright} from 'react-icons/ai';
+import {BsWhatsapp, BsInstagram, BsFacebook, BsEnvelopeAt} from 'react-icons/bs';
+import Link from 'next/link';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -134,6 +137,87 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.section__expert}>
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                
+                <div className={styles.expert__content}>
+                  <h2>Agora é a sua vez de alcançar o sucesso!</h2>
+                  <p>Você está <strong>a um passo de impulsionar o crescimento do seu negócio</strong> e dominar o mercado. Não deixe essa oportunidade escapar. Entre em contato e descubra como podemos transformar seus sonhos em realidade!</p>
+                  <LinkButtonPrimary 
+                    text='Quero Alavancar Meu Negócio Agora'
+                    url='/'
+                  />
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.section__contact}>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                
+                <div className={styles.contact__content}>
+                  <h2>Agora é a sua vez de alcançar o sucesso!</h2>
+                  <p>Você está <strong>a um passo de impulsionar o crescimento do seu negócio</strong> e dominar o mercado. Não deixe essa oportunidade escapar. Entre em contato e descubra como podemos transformar seus sonhos em realidade!</p>
+                  <LinkButtonPrimary 
+                    text='Quero Alavancar Meu Negócio Agora'
+                    url='/'
+                  />
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className={styles.footer}>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
+                <div className={styles.social__container}>
+                  <ul>
+                    <li>
+                      <Link href='/'>
+                        <BsWhatsapp />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/'>
+                        <BsInstagram />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/'>
+                        <BsFacebook />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/'>
+                        <BsEnvelopeAt />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className={styles.copy__container}>
+                  <p>Copyright <AiOutlineCopyright /> Todos os direitos reservados </p>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className={styles.copy__container}>
+                  <Link href='/'>Politicas de Privacidade </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   );

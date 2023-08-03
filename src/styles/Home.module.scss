@@ -1,4 +1,5 @@
 @import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 
 // hero
 .section__hero {
@@ -15,7 +16,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient(circle, rgba(0,0,0,0) 74%, rgba(0, 0, 0, 0.671) 100%);
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 74%,
+      rgba(0, 0, 0, 0.671) 100%
+    );
   }
 }
 
@@ -49,7 +54,7 @@
   background: #111520;
   background-size: cover;
   position: relative;
-  padding: 70px 0;
+  padding: 70px 0 0 0;
   text-align: center;
 }
 
@@ -61,6 +66,72 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+}
+
+.section__expert {
+  background: #111520;
+  padding: 70px 0;
+
+  .expert__content {
+    @include flex__center();
+    flex-direction: column;
+    text-align: center;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.section__contact {
+  background-image: url("../../public/images/bg/bg-oferta.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 405px #000000;
+  background-attachment: fixed;
+  padding: 50px 0;
+}
+
+.footer {
+  padding: 35px 0;
+  background: #131313;
+
+  .social__container {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      li {
+        @include flex__center();
+        background: $primary__color__100;
+        color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        transition: 0.2s ease;
+
+        &:hover {
+          background: #fff;
+          color: $primary__color__100;
+        }
+      }
+    }
+  }
+}
+
+.copy__container {
+  @include flex__center();
+  height: 100%;
+  color: #fff;
+  p {
+    margin: 0;
+  }
+  a {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -78,6 +149,27 @@
     padding: 0;
     margin-bottom: 40px;
   }
+
+  .solution__card__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .section__contact {
+    @include flex__center();
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact__content {
+    @include flex__center();
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copy__container {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 556px) {
@@ -93,5 +185,29 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .solution__card__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    .social__container {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+  
+        li {
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
 }

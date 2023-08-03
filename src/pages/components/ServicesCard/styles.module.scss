@@ -43,3 +43,10 @@
 .card__content {
   padding: 0 15px;
 }
+
+
+@media only screen and (max-width: 992px) {
+  .card__content {
+    margin-top: 20px;
+  }
+}
